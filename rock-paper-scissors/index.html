@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rock Paper Scissors</title>
+  <style>
+    body { font-family: system-ui, sans-serif; text-align: center; padding: 2rem 16px; }
+    button { font-size: 2.5rem; margin: 0.5rem; padding: 0.5rem 1rem; cursor: pointer; border-radius: 0.5rem; }
+    #score { font-size: 1.5rem; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Rock Paper Scissors</h1>
+  <p>First to 5 wins.</p>
+  <div id="choices">
+    <button data-choice="rock" aria-label="Rock">✊</button>
+    <button data-choice="paper" aria-label="Paper">✋</button>
+    <button data-choice="scissors" aria-label="Scissors">✌️</button>
+  </div>
+  <p id="round"></p>
+  <p id="score">You 0 – 0 Computer</p>
+  <button id="reset" hidden>Play again</button>
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculator</title>
+  <style>
+    body { font-family: system-ui, sans-serif; display: grid; place-items: center; min-height: 100vh; margin: 0; background: #222; }
+    .calc { width: min(320px, calc(100vw - 32px)); background: #333; padding: 1rem; border-radius: 1rem; }
+    #display { background: #111; color: #fff; text-align: right; font-size: 2.2rem; padding: 0.75rem; border-radius: 0.5rem; overflow-x: auto; min-height: 3rem; font-variant-numeric: tabular-nums; }
+    .keys { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-top: 1rem; }
+    button { font-size: 1.4rem; padding: 1rem 0; border: none; border-radius: 0.5rem; background: #555; color: #fff; cursor: pointer; }
+    button.op { background: #f39c12; }
+    button.fn { background: #888; }
+    button.wide { grid-column: span 2; }
+  </style>
+</head>
+<body>
+  <div class="calc">
+    <div id="display">0</div>
+    <div class="keys">
+      <button class="fn" data-action="clear">AC</button>
+      <button class="fn" data-action="back">⌫</button>
+      <button class="fn" data-action="percent">%</button>
+      <button class="op" data-op="/">÷</button>
+      <button data-digit="7">7</button><button data-digit="8">8</button><button data-digit="9">9</button>
+      <button class="op" data-op="*">×</button>
+      <button data-digit="4">4</button><button data-digit="5">5</button><button data-digit="6">6</button>
+      <button class="op" data-op="-">−</button>
+      <button data-digit="1">1</button><button data-digit="2">2</button><button data-digit="3">3</button>
+      <button class="op" data-op="+">+</button>
+      <button class="wide" data-digit="0">0</button>
+      <button data-action="dot">.</button>
+      <button class="op" data-action="equals">=</button>
+    </div>
+  </div>
+  <script src="calculator.js"></script>
+</body>
+</html>
